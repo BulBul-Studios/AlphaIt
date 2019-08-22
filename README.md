@@ -6,4 +6,5 @@ Alphait is a bot made on the python module discord.py! I started it on september
 
 # Commands
 
-# Heading level 1
+**Moderation:**
+a!ban Bans the specifed user
