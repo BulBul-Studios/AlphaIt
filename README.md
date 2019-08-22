@@ -4,3 +4,6 @@ Alphait is a bot made on the python module discord.py! I started it on september
 # Find Alphait on bot lists!
 [![AlphaIt](https://divinediscordbots.com/api/widget/493973379515416577.svg)](https://divinediscordbots.com/bot/493973379515416577) [![Discord Bots](https://discordbots.org/api/widget/493973379515416577.svg)](https://discordbots.org/bot/493973379515416577)
 
+# Commands
+
+# Heading level 1
