@@ -8,10 +8,10 @@ Alphait is a bot made on the python module discord.py! I started it on september
 
 **Moderation:**
 
-a!ban Bans the specifed user.
-
-a!unban Unbans the specifed user.
-
-a!kick Kicks the the specifed user.
-
-a!purge (a!clear) Clears the specifed amount of messages.
+> a!ban Bans the specifed user.
+>
+> a!unban Unbans the specifed user.
+>
+> a!kick Kicks the the specifed user.
+>
+> a!purge (a!clear) Clears the specifed amount of messages.
