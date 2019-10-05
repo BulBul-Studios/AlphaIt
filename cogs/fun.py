@@ -38,5 +38,12 @@ class fun(commands.Cog):
     async def coinflip(self, ctx):
         await ctx.send(random.choice(["Heads", "Tails", "Sideways"]))
 
+    @commands.command()
+    async def binary(self, ctx):
+        message = ctx.author.content
+        st = message
+        converter = ' '.join(format(ord(x), 'b') for x in st)
+        await ctx.send(converter)
+
 def setup(bot):
     bot.add_cog(fun(bot))
