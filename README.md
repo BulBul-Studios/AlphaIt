@@ -16,7 +16,7 @@ SECTION COMING SOON
 >
 > a!purge - (a!clear) Clears the specifed amount of messages.
 
-**Fun and Intercation Commands**
+**Fun and Intercation Commands:**
 
 > a!dab - You dab on the specifed user.
 >
