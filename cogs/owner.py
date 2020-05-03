@@ -13,11 +13,12 @@ class owner(commands.Cog):
         self.client = client
 
 
-    @commands.is_owner()
+    
     @commands.command()
     async def restart(self, ctx):
-        await ctx.send("Restarting..")
-        await self.client.logout()
+        if ctx.message.author.id == "374771579164426240":
+            await ctx.send("Restarting..")
+            await self.client.logout()
 
 def setup(bot):
     bot.add_cog(owner(bot))
