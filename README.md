@@ -6,7 +6,7 @@ SECTION COMING SOON
 
 # Commands
 
-**Moderation:**
+**Moderation Commands:**
 
 > a!ban - Bans the specifed user.
 >
