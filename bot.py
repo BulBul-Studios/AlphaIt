@@ -2,8 +2,16 @@ import discord
 from discord.ext import commands
 import sys
 import os
+import json
 
-client = commands.Bot(command_prefix='a!')
+def get_prefix(client, message):
+    with open('prefixes.json','r') as f:
+        prefixes = json.load(f)
+
+    return prefixes[str(message.guild.id)]
+
+
+client = commands.Bot(command_prefix = get_prefix)
 token = sys.argv[1]
 client.remove_command('help')
 
@@ -17,21 +25,38 @@ async def on_ready():
     activity = discord.Activity(name=f'{len(client.guilds)} servers with {len(set(client.get_all_members()))} members | a!help', type=discord.ActivityType.watching)
     await client.change_presence(activity=activity)
     print(f"Sweet, I have booted as {client.user.name} ({client.user.id})")
-    
-    
+
 @client.event
-async def on_message(message):
-    if message.author.bot:
-        return
+async def on_guild_join(guild):
+    with open('prefixes.json','r') as f:
+        prefixes = json.load(f)
 
-    channel = client.get_channel(623360296974549012)
-    await channel.send("<@212580493466664960> :eyes: you've been pinged yay")
-    
-    if ("69" in message.content.lower()) or ("420" in message.content.lower()):
-        await message.channel.send("nice")
+    prefixes[str(guild.id)] = 'a!'
 
+    with open('prefixes.json', 'w') as f:
+        json.dump(prefixes, f, indent=4)
+
+@client.event
+async def on_guild_remove(guild):
+    with open('prefixes.json','r') as f:
+        prefixes = json.load(f)
     
-    await client.process_commands(message)
+    prefixes.pop(str(guild.id))
+
+    with open('prefixes.joson', 'w') as f:
+        json.dump(prefixes, f, indent = 4)
+        
+'''@client.command()
+async def prefix(ctx, prefix):
+    @has_permissions(administrator=True)
+    with open('prefixes.json','r') as f:
+        prefixes = json.load(f)
+
+    prefixes[str(ctx.guild.id)] = prefix
+    with open('prefixes.json', 'w') as f:
+        json.dump(prefixes, f, indent=4)
+    await ctx.send(f"Prefixed changed to {prefix}")'''
+
 
 @commands.is_owner()
 @client.command()
@@ -51,7 +76,5 @@ async def reload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     client.load_extension(f'cogs.{extension}')
     await ctx.send(f"Successfully reloaded the cog `{extension}`")
-
-
 
 client.run(token)
