@@ -28,7 +28,7 @@ SECTION COMING SOON
 >
 > a!rps - Rock, Paper, Scissors.
 
-**Ulities and Infomation Commands:
+**Ulities and Infomation Commands:**
 
 > a!help - Sends the help command.
 >
