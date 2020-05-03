@@ -20,11 +20,11 @@ class Events(commands.Cog):
         channel = self.client.get_channel(612027042061615135)
         embed = discord.Embed(color=discord.Color.dark_green())
         embed.add_field(name="Joined a Server!", value=f"<:upvote:607776642189754368> AlphaIt just joined ***{guild.name}***. Now we are on ***{servers}*** servers.")
-        await self.channel.send(embed=embed)
+        await channel.send(embed=embed)
         await self.client.change_presence(activity=activity)
         
     @commands.Cog.listener()
-    async def on_guild_leave(self, guild):
+    async def on_guild_remove(self, guild):
         servers = len(self.client.guilds)
         members = len(set(self.client.get_all_members()))
         activity = discord.Activity(name=f'{servers} servers with {members} members | a!help', type=discord.ActivityType.watching)
