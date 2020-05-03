@@ -14,4 +14,8 @@ Since you're here lemme tell you about my bot AlphaIt! AlphaIt is a bot I've spe
 >
 > a!kick Kicks the the specifed user.
 >
-> a!purge (a!clear) Clears the specifed amount of messages.
+> a!purge (a!clear) Clears the specifed amount of messages,
+
+**Fun and Intercation Commands**
+
+> a!dab 
