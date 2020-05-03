@@ -1,5 +1,5 @@
-# Welcome to the the AlphaIt github repo!
-SECTION COMING SOON
+# Welcome to the AlphaIt GitHub repo!
+AlphaIt is a multiple purpose bot, that has stuff like moderation, fun and information commands, and much much more.
 
 # Find Alphait on bot lists!
 [![Discord Bots](https://discordbots.org/api/widget/493973379515416577.svg)](https://discordbots.org/bot/493973379515416577)
@@ -8,19 +8,19 @@ SECTION COMING SOON
 
 **Moderation Commands:**
 
-> a!ban - Bans the specifed user.
+> a!ban - Bans the specified user.
 >
-> a!unban - Unbans the specifed user.
+> a!unban - Unbans the specified user.
 >
-> a!kick - Kicks the the specifed user.
+> a!kick - Kicks the specified user.
 >
-> a!purge - (a!clear) Clears the specifed amount of messages.
+> a!purge - (a!clear) Clears the specified amount of messages.
 
-**Fun and Intercation Commands:**
+**Fun and Interaction Commands:**
 
-> a!dab - You dab on the specifed user.
+> a!dab - You dab on the specified user.
 >
-> a!defualt - You defualt dance on the specifed user.
+> a!defualt - You default dance on the specified user.
 >
 > a!8ball - A magic 8ball.
 >
@@ -28,7 +28,7 @@ SECTION COMING SOON
 >
 > a!rps - Rock, Paper, Scissors.
 
-**Ulities and Infomation Commands:**
+**Utilities and Infomation Commands:**
 
 > a!help - Sends the help command.
 >
@@ -38,8 +38,8 @@ SECTION COMING SOON
 >
 > a!vote - Sends a link to vote for the bot.
 >
-> a!userinfo - Sends infomation about the specifed user.
+> a!userinfo - Sends information about the specified user.
 >
-> a!serverinfo - Sends infomation about the server this command is ran in.
+> a!serverinfo - Sends information about the server that this command is run in.
 >
-> a!roleinfo - Sends infomation about the specifed role.
+> a!roleinfo - Sends information about the specified role.
