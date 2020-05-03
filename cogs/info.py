@@ -41,7 +41,7 @@ class info(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
-    async def userinfo(self, ctx, member: discord.Member):
+    async def userinfo(self, ctx, member: discord.Member = None):
         member = ctx.author if not member else member
         embed = discord.Embed(color=discord.Color.green(), timestamp=ctx.message.created_at)
         embed.set_thumbnail(url=member.avatar_url)
